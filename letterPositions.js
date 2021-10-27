@@ -38,5 +38,5 @@ const letterPositions = function(sentence) {
 };
 
 letterPositions("hello");
-letterPositions("llama labratory")
-letterPositions("lighthouse is funky")
+letterPositions("llama labratory");
+letterPositions("lighthouse is funky");
