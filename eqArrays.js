@@ -7,15 +7,16 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(array1, array2) {
-  for (let val of array1) {
-    for (let val1 of array2) {//loop through both the arrays
-      if (val !== val1 || array1.length !== array2.length) { //if indexes of the arrays do not match or the lengths do not match
-        return false; //return false
-      } else if (array1.length === array2.length && val === val1) { //if both length and indexes match
-        return true; //returns true
-      }
+  if (array1.length !== array2.length) { //checks array length first if they are the same then code continues
+    return false;
+  }
+  for (let i = 0; i < array1.length; i++) { //loops through array
+    if (array1[i] !== array2[i]) { //if indexes of the arrays do not match
+      return false; //return false
     }
   }
+  return true; //if it passes above tests, then returns true because the arrays are the same
 };
+
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS because true === true
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => should PASS because false === false
+assertEqual(eqArrays([1, 2, 3], [1, 2, 5]), false); // => should PASS because false === false
