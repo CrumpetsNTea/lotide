@@ -19,22 +19,19 @@ let assertArraysEqual = function(array1, array2) { //takes two arrays
 };
 
 const middle = function(array) {
-  let stuckInTheMiddle = [];
-  let theMiddle;
-  if (array.length < 3) {
-    return stuckInTheMiddle;
-  } else if (array.length % 2 === 0) {
-    theMiddle = Math.floor(array.length / 2);
-    stuckInTheMiddle.push(array[theMiddle - 1], array[theMiddle]);
+  let stuckInTheMiddle = []; //declare new array to push middle numbers to
+  let theMiddle; //declares an empty variable to hold our middle numbers to perform operations on
+  if (array.length < 3) { //if array has less than three items
+    return stuckInTheMiddle; //return empty array
+  } else if (array.length % 2 === 0) { //if array is even
+    theMiddle = Math.floor(array.length / 2); //theMiddle is now equal to the result of the math operations
+    stuckInTheMiddle.push(array[theMiddle - 1], array[theMiddle]); //pushes the result of above minus one, and the result of above, thus pushing the two middle numbers to the empty array of stuckInTheMiddle
   }
-  return stuckInTheMiddle;
+  return stuckInTheMiddle; //returns the array of middle numbers
 };
 console.log(middle([1, 2])); // => []
 console.log(middle([1, 2, 3, 4])); // => [2, 3]
 
 // if array has less than 3 items then it returns empty
 //if array length is even then return two middle elements
-//so middle index would be (array.length divided by 2) - 1
-
 //if odd then return exact middle element
-// which would be array length - 1 (makiing it even) then divided by 2
