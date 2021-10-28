@@ -1,7 +1,7 @@
 const takeUntil = function(array, callback) {
   let results = []; //empty array to push reults into
   
-  for (val of array) { //loop through array
+  for (let val of array) { //loop through array
     if (callback(val) === true) { //if the value of the array fulfills the callback function requirements
       return results; //then stop looping and return the array of items thus far
     }
