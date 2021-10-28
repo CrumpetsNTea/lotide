@@ -1,5 +1,5 @@
 
-const eqArrays = function(array1, array2) {
+const eqArrays = (array1, array2) => {
   if (array1.length !== array2.length) { //checks array length first if they are the same then code continues
     return false;
   }
@@ -11,7 +11,7 @@ const eqArrays = function(array1, array2) {
   return true; //if it passes above tests, then returns true because the arrays are the same
 };
 
-let assertArraysEqual = function(array1, array2) { //takes two arrays
+let assertArraysEqual = (array1, array2) => { //takes two arrays
   if (eqArrays(array1,array2)) { //uses the eqArrays function to compare these two arrays
     console.log(`🎉 Assertion Passed: ${array1} === ${array2}`); //console.logs happy message if they are identical
   } else { //if they are not exact
