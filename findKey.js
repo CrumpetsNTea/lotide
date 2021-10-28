@@ -6,9 +6,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKey = function(object, callback) {
+const findKey = (object, callback) => {
   for (let key in object) { //loop through object
-    if (callback(object[key])) { //if the item in the object fulfills the callback requirements
+    if (callback(object[key])) { //if the item in the object fulfills the callback requirements - which are defined as anonymous arrow functions
       return key; //return key which in turn stops the loop
     }
   }
@@ -32,7 +32,7 @@ let test2 = findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
+}, x => x.stars === 2); // => "Ora"
 assertEqual(test2, "Ora");
 
 let test3 = findKey({
@@ -42,5 +42,5 @@ let test3 = findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 3 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
+}, x => x.stars === 2); // => undefined
 assertEqual(test3, undefined);
