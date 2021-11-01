@@ -18,13 +18,10 @@ describe("head function", () => {
   it("should return Hello when passed array with Hello at [0]", () => {
     assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
   });
-
-// assertEqual(head([]), 5); //Should fail
-// assertEqual(head([5]), 5); //Should pass
-
-// it("should return null if not valid number", () => {
-//   const input = "😃";
-//   const expectedOutput = null;
-//   const result = round(input);
-  
-//   expect(result).to.equal(expectedOutput);
+  it("should recognize empty array as undefined", () => {
+    assert.strictEqual(head([]), undefined);
+  });
+  it("should return 5 when passed array with only 5 in it", () => {
+    assert.strictEqual(head([5]), 5);
+  });
+});
