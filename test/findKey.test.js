@@ -7,7 +7,7 @@ let test1 = _.findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
+}, x => x.stars === 2); // => PASS "noma"
 _.assertEqual(test1, "noma");
 
 let test2 = _.findKey({
@@ -17,7 +17,7 @@ let test2 = _.findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "Ora"
+}, x => x.stars === 2); // => PASS "Ora"
 _.assertEqual(test2, "Ora");
 
 let test3 = _.findKey({
@@ -27,5 +27,5 @@ let test3 = _.findKey({
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 3 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => undefined
+}, x => x.stars === 2); // => PASS undefined
 _.assertEqual(test3, undefined);
