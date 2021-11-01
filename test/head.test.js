@@ -9,11 +9,11 @@ describe("head function", () => {
   });
   it("should return 5 for [5, 6, 7]", () => {
     const result = head([5, 6, 7]);
-    expect(result).to.deep.equal(5); //messed around with a different way of writing a test
+    expect(result).to.equal(5); //messed around with a different way of writing a test
   });
   it("should not return 6 for [5, 6, 7]", () => {
     const result = head([5, 6, 7]);
-    expect(result).to.not.deep.equal(6); //messed around with a different way of writing a test
+    expect(result).to.not.equal(6); //messed around with a different way of writing a test
   });
   it("should return Hello when passed array with Hello at [0]", () => {
     assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
