@@ -1,6 +1,6 @@
 const chai = require('chai');
 const assert = chai.assert;
-const _ = require('../index');
+const _ = require('/Users/tobias/lighthouse/w1/lotide/index.js');
 //Test
 describe("tail function", () => {
   it("should return an empty array when passed an array with less than three items", () => {

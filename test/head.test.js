@@ -1,5 +1,5 @@
 const _ = require('../index'); //import head
-const chai = require('./chai');
+const chai = require('chai');
 const assert = chai.assert;
 const expect = chai.expect;
 
