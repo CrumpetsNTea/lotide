@@ -1,15 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🎉 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🙈 Assertion Failed: ${actual} !==  ${expected}`);
-  }
-};
 const tail = function(actual) {
-  let newArr = actual.slice(1);
-  console.log(newArr);
+  let newArr = actual.slice(1); //creates a new array with the first item from passed in array removed
+  console.log(newArr); //returns new array
 };
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3);
+module.exports = tail; //make this function exportable

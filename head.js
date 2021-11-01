@@ -1,7 +1,5 @@
-const assertEqual = require('./assertEqual');
-
 const head = (actual) => {
-  return actual[0];
+  return actual[0]; //returns the item at index[0]
 };
 
-module.exports = head;
+module.exports = head;//make head function exportable
