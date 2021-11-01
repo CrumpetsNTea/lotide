@@ -11,7 +11,7 @@ const head = require('./head');
 const letterPositions = require('./letterPositions');
 const map = require('./map');
 const middle = require('./middle');
-const tail = require('./tail');
+const tail = require('/Users/tobias/lighthouse/w1/lotide/tail');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
@@ -25,11 +25,11 @@ module.exports = {
   eqObjects: eqObjects,
   findKey: findKey,
   findKeyByValue: findKeyByValue,
-  head:   head,
+  head: head,
   letterPositions: letterPositions,
   map: map,
   middle: middle,
-  tail:   tail,
+  tail: tail,
   takeUntil: takeUntil,
   without: without
 };

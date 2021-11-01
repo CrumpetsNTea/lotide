@@ -1,7 +1,7 @@
-const _ = require('./index');
+const eqArrays = require('./eqArrays');
 
 let assertArraysEqual = (array1, array2) => { //takes two arrays
-  if (_.eqArrays(array1,array2)) { //uses the eqArrays function to compare these two arrays
+  if (eqArrays(array1, array2)) { //uses the eqArrays function to compare these two arrays
     console.log(`🎉 Assertion Passed: ${array1} === ${array2}`); //console.logs happy message if they are identical
   } else { //if they are not exact
     console.log(`🙈 Assertion Failed: ${array1} !== ${array2}`); //console.logs sad message
@@ -9,3 +9,4 @@ let assertArraysEqual = (array1, array2) => { //takes two arrays
 };
 
 module.exports = assertArraysEqual;
+// _.assertEqual(_.eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS because true === true

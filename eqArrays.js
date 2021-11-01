@@ -9,5 +9,4 @@ const eqArrays = (array1, array2) => {
   }
   return true; //if it passes above tests, then returns true because the arrays are the same
 };
-
 module.exports = eqArrays;
