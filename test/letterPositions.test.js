@@ -1,5 +1,5 @@
 const _ = require('../index'); //import head
 
-_.letterPositions("hello");
-_.letterPositions("llama labratory");
-_.letterPositions("lighthouse is funky");
+console.log(_.letterPositions("hello"));
+console.log(_.letterPositions("llama labratory"));
+console.log(_.letterPositions("lighthouse is funky"));
