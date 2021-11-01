@@ -10,9 +10,13 @@ describe("middle function", () => {
   it("should return 2 when passed array [1, 2, 3]", () => {
     assert.deepEqual(middle([1,2,3]), [2]);
   });
+  it("should return 3 when passed array [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
+  });
+  it("should return 2, 3 when passed an array with an even amount of indexes [1, 2, 3, 4]", () => {
+    assert.deepEqual(middle([1, 2, 3, 4]) [2, 3]);
+  });
 });
-// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // PASS gets three as the middle
-// assertArraysEqual(middle([1, 2, 3, 4]), [2]); //Should fail because middle will be equal to [2, 3]
 
 // // if array has less than 3 items then it returns empty
 //if array length is even then return two middle elements
