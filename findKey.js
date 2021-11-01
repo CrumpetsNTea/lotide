@@ -1,11 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`🎉 Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🙈 Assertion Failed: ${actual} !==  ${expected}`);
-  }
-};
-
 const findKey = (object, callback) => {
   for (let key in object) { //loop through object
     if (callback(object[key])) { //if the item in the object fulfills the callback requirements (returns true) - which are defined as anonymous arrow functions
@@ -15,32 +7,4 @@ const findKey = (object, callback) => {
   return undefined; //if callback requirements are not met (callback returns false) then return undefined
 };
 
-let test1 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
-assertEqual(test1, "noma");
-
-let test2 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 4 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "Ora"
-assertEqual(test2, "Ora");
-
-let test3 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 4 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 3 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => undefined
-assertEqual(test3, undefined);
+module.exports = findKey;
